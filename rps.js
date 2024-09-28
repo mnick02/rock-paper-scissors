@@ -1,4 +1,7 @@
 //console.log("Hello World");
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     num = Math.floor(Math.random() * 60) + 1;
     //console.log(num);
