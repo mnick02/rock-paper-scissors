@@ -21,9 +21,17 @@ function getHumanChoice() {
     if (choice.toLowerCase() === "rock" ||
         choice.toLowerCase() === "paper" ||
         choice.toLowerCase() === "scissors"){
-            return "valid choice!";
+            //console.log(typeof(choice));
+            return choice;
         }
     else {
         return "Sorry, I don't know this move!";
     }
 }
+
+function playRound(humanChoice, computerChoice) {
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
