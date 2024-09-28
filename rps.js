@@ -20,7 +20,7 @@ function getHumanChoice() {
     let choice = prompt("Choose a move:");
     if (choice.toLowerCase() === "rock" ||
         choice.toLowerCase() === "paper" ||
-        choice.toLowerCase() === "scissors"){
+        choice.toLowerCase() === "scissors") {
             //console.log(typeof(choice));
             return choice;
         }
@@ -30,8 +30,17 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-
+    if (humanChoice === "rock" && computerChoice === "scissors"
+        || humanChoice === "paper" && computerChoice === "rock"
+        || humanChoice === "scissors" && computerChoice === "paper") {
+            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        }
+    else {
+        console.log(`You lose! ${humanChoice} loses to ${computerChoice}`);
+    }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
