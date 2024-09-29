@@ -55,9 +55,9 @@ function playGame() {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
-        console.log("looped");
-        console.log(humanSelection);
-        console.log(computerSelection);
+        //console.log("looped");
+        //console.log(humanSelection);
+        //console.log(computerSelection);
     }
 
     if (humanScore > computerScore) {
