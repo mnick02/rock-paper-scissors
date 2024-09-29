@@ -1,7 +1,4 @@
 //console.log("Hello World");
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
     num = Math.floor(Math.random() * 60) + 1;
     //console.log(num);
@@ -50,3 +47,9 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    
+}
