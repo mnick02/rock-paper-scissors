@@ -1,1 +1,1 @@
-# rock-paper-scissors
+This project aims to create a 5 round game of rock-paper-scissors between the user and the computer. Throughout it, I demonstrate skills in javascript such as creating functions, conditionals, loops. I also demonstrate an understanding of scope and problems solving in general.
