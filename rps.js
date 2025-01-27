@@ -51,14 +51,11 @@ function playGame() {
         }
     }
 
-    for(let i = 0; i < 5; i++) {
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        //console.log("looped");
-        //console.log(humanSelection);
-        //console.log(computerSelection);
-    }
+
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    
 
     if (humanScore > computerScore) {
         console.log(`You are the winner! The score was ${humanScore} to ${computerScore}`); 
