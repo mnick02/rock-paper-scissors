@@ -38,7 +38,7 @@ score_text.classList.add("score_text");
 score_text.textContent = "Hi";
 container.appendChild(score_text);
 
-function playGame() {
+
     let humanScore = 0;
     let computerScore = 0;
  
@@ -122,4 +122,3 @@ function playGame() {
 
     
 
-}
