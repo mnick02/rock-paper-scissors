@@ -41,6 +41,7 @@ container.appendChild(score_text);
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+ 
     //const humanSelection = getHumanChoice();
     //const computerSelection = getComputerChoice();
 
@@ -62,6 +63,7 @@ function playGame() {
             content.textContent = `You lose! ${humanChoice} loses to ${computerChoice}`;
             computerScore++;
         }
+
     }
 
 
@@ -92,15 +94,25 @@ function playGame() {
         }
 
         if (humanScore > computerScore) {
-            score_text.textContent = `You are the winner! The score was ${humanScore} to ${computerScore}`;
+            if (humanScore == 5) {
+                content.textContent = "You won! You reached 5 points!";
+                humanScore = 0;
+                computerScore = 0;
+            }
+            score_text.textContent = `You are the winner! The score is ${humanScore} to ${computerScore}`;
             console.log(`You are the winner! The score was ${humanScore} to ${computerScore}`); 
         }
         else if (computerScore > humanScore) {
-            score_text.textContent = `You lost! The score was ${computerScore} to ${humanScore}`;
+            if (computerScore == 5) {
+                content.textContent = "You Lost! The computer reached 5 points!";
+                humanScore = 0;
+                computerScore = 0;
+            }
+            score_text.textContent = `You lost! The score is ${computerScore} to ${humanScore}`;
             console.log(`You lost! The score was ${computerScore} to ${humanScore}`); 
         }
         else {
-            score_text.textContent = `It's a tie! The score was ${humanScore} to ${computerScore}`;
+            score_text.textContent = `It's a tie! The score is ${humanScore} to ${computerScore}`;
             console.log(`It's a tie! The score was ${humanScore} to ${computerScore}`);
         }
     });
