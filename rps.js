@@ -99,8 +99,8 @@ function playGame() {
                 humanScore = 0;
                 computerScore = 0;
             }
-            score_text.textContent = `You are the winner! The score is ${humanScore} to ${computerScore}`;
-            console.log(`You are the winner! The score was ${humanScore} to ${computerScore}`); 
+            score_text.textContent = `The score is ${humanScore} to ${computerScore}`;
+            console.log(`The score is ${humanScore} to ${computerScore}`); 
         }
         else if (computerScore > humanScore) {
             if (computerScore == 5) {
@@ -108,12 +108,12 @@ function playGame() {
                 humanScore = 0;
                 computerScore = 0;
             }
-            score_text.textContent = `You lost! The score is ${computerScore} to ${humanScore}`;
-            console.log(`You lost! The score was ${computerScore} to ${humanScore}`); 
+            score_text.textContent = `The score is ${computerScore} to ${humanScore}`;
+            console.log(`The score is ${computerScore} to ${humanScore}`); 
         }
         else {
-            score_text.textContent = `It's a tie! The score is ${humanScore} to ${computerScore}`;
-            console.log(`It's a tie! The score was ${humanScore} to ${computerScore}`);
+            score_text.textContent = `The score is ${humanScore} to ${computerScore}`;
+            console.log(`The score is ${humanScore} to ${computerScore}`);
         }
     });
     
