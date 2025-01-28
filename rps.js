@@ -27,12 +27,10 @@ const container = document.querySelector("#container");
 
 const content = document.createElement("div");
 content.classList.add("content");
-content.textContent = "This is the glorious text-content!";
 container.appendChild(content);
 
 const score_text = document.createElement("div");
 score_text.classList.add("score_text");
-score_text.textContent = "Hi";
 container.appendChild(score_text);
 
 
