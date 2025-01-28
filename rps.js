@@ -108,7 +108,7 @@ function playGame() {
                 humanScore = 0;
                 computerScore = 0;
             }
-            score_text.textContent = `The score is ${computerScore} to ${humanScore}`;
+            score_text.textContent = `The score is ${humanScore} to ${computerScore}`;
             console.log(`The score is ${computerScore} to ${humanScore}`); 
         }
         else {
