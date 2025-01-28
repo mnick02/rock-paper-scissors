@@ -44,14 +44,17 @@ function playGame() {
         if (humanChoice === "rock" && computerChoice === "scissors"
             || humanChoice === "paper" && computerChoice === "rock"
             || humanChoice === "scissors" && computerChoice === "paper") {
-                console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+                //console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+                content.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
                 humanScore++;
             }
         else if (humanChoice === computerChoice) {
-            console.log(`It's a tie! You chose ${humanChoice} and the computer chose ${computerChoice}`);
+            //console.log(`It's a tie! You chose ${humanChoice} and the computer chose ${computerChoice}`);
+            content.textContent = `It's a tie! You chose ${humanChoice} and the computer chose ${computerChoice}`;
         }
         else {
-            console.log(`You lose! ${humanChoice} loses to ${computerChoice}`);
+            //console.log(`You lose! ${humanChoice} loses to ${computerChoice}`);
+            content.textContent = `You lose! ${humanChoice} loses to ${computerChoice}`;
             computerScore++;
         }
     }
@@ -69,7 +72,6 @@ function playGame() {
             case "rck":
                 console.log("Rock button was clicked");
                 humanSelection = "rock";
-                content.textContent = "rock now";
                 playRound(humanSelection, computerSelection);
                 break;
             case "per":
