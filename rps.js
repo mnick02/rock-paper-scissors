@@ -1,7 +1,5 @@
-//console.log("Hello World");
 function getComputerChoice() {
     num = Math.floor(Math.random() * 60) + 1;
-    //console.log(num);
     if (num >= 0 && num < 20) {
         return "rock";
     }
@@ -18,7 +16,6 @@ function getHumanChoice() {
     if (choice.toLowerCase() === "rock" ||
         choice.toLowerCase() === "paper" ||
         choice.toLowerCase() === "scissors") {
-            //console.log(typeof(choice));
             return choice;
         }
     else {
@@ -41,25 +38,19 @@ container.appendChild(score_text);
 
     let humanScore = 0;
     let computerScore = 0;
- 
-    //const humanSelection = getHumanChoice();
-    //const computerSelection = getComputerChoice();
 
     function playRound(humanChoice, computerChoice) {
         humanChoice = humanChoice.toLowerCase();
         if (humanChoice === "rock" && computerChoice === "scissors"
             || humanChoice === "paper" && computerChoice === "rock"
             || humanChoice === "scissors" && computerChoice === "paper") {
-                //console.log(`You win! ${humanChoice} beats ${computerChoice}`);
                 content.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
                 humanScore++;
             }
         else if (humanChoice === computerChoice) {
-            //console.log(`It's a tie! You chose ${humanChoice} and the computer chose ${computerChoice}`);
             content.textContent = `It's a tie! You chose ${humanChoice} and the computer chose ${computerChoice}`;
         }
         else {
-            //console.log(`You lose! ${humanChoice} loses to ${computerChoice}`);
             content.textContent = `You lose! ${humanChoice} loses to ${computerChoice}`;
             computerScore++;
         }
@@ -67,9 +58,7 @@ container.appendChild(score_text);
     }
 
 
-    //let humanSelection = getHumanChoice();
     let humanSelction = "";
-    //playRound(humanSelection, computerSelection);
 
     let options = document.querySelector("#options");
     options.addEventListener("click", (event) => {
