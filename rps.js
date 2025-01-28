@@ -26,7 +26,12 @@ function getHumanChoice() {
     }
 }
 
+const container = document.querySelector("#container");
 
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is the glorious text-content!";
+container.appendChild(content);
 
 function playGame() {
     let humanScore = 0;
@@ -64,6 +69,7 @@ function playGame() {
             case "rck":
                 console.log("Rock button was clicked");
                 humanSelection = "rock";
+                content.textContent = "rock now";
                 playRound(humanSelection, computerSelection);
                 break;
             case "per":
