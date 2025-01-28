@@ -53,7 +53,7 @@ function playGame() {
 
 
     //let humanSelection = getHumanChoice();
-    //let computerSelection = getComputerChoice();
+    let computerSelection = getComputerChoice();
     //playRound(humanSelection, computerSelection);
 
     let options = document.querySelector("#options");
@@ -63,6 +63,8 @@ function playGame() {
         switch(target.id) {
             case "rck":
                 console.log("Rock button was clicked");
+                let humanSelection = "rock";
+                playRound(humanSelection, computerSelection);
                 break;
             case "per":
                 console.log("Paper button was clicked");
@@ -71,18 +73,20 @@ function playGame() {
                 console.log("Scissors button was clicked");
                 break;
         }
+
+        if (humanScore > computerScore) {
+            console.log(`You are the winner! The score was ${humanScore} to ${computerScore}`); 
+        }
+        else if (computerScore > humanScore) {
+            console.log(`You lost! The score was ${computerScore} to ${humanScore}`); 
+        }
+        else {
+            console.log(`It's a tie! The score was ${humanScore} to ${computerScore}`);
+        }
     });
     
 
-    if (humanScore > computerScore) {
-        console.log(`You are the winner! The score was ${humanScore} to ${computerScore}`); 
-    }
-    else if (computerScore > humanScore) {
-        console.log(`You lost! The score was ${computerScore} to ${humanScore}`); 
-    }
-    else {
-        console.log(`It's a tie! The score was ${humanScore} to ${computerScore}`);
-    }
+
 
     
 
