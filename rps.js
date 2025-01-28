@@ -53,13 +53,13 @@ function playGame() {
 
 
     //let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
+    
     //playRound(humanSelection, computerSelection);
 
     let options = document.querySelector("#options");
     options.addEventListener("click", (event) => {
         let target = event.target;
-
+        let computerSelection = getComputerChoice();
         switch(target.id) {
             case "rck":
                 console.log("Rock button was clicked");
