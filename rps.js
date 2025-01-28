@@ -73,6 +73,8 @@ function playGame() {
                 break;
             case "sci":
                 console.log("Scissors button was clicked");
+                humanSelction = "scissors";
+                playRound(humanSelction, computerSelection);
                 break;
         }
 
