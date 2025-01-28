@@ -52,9 +52,26 @@ function playGame() {
     }
 
 
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    //let humanSelection = getHumanChoice();
+    //let computerSelection = getComputerChoice();
+    //playRound(humanSelection, computerSelection);
+
+    let options = document.querySelector("#options");
+    options.addEventListener("click", (event) => {
+        let target = event.target;
+
+        switch(target.id) {
+            case "rck":
+                console.log("Rock button was clicked");
+                break;
+            case "per":
+                console.log("Paper button was clicked");
+                break;
+            case "sci":
+                console.log("Scissors button was clicked");
+                break;
+        }
+    });
     
 
     if (humanScore > computerScore) {
